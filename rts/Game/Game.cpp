@@ -1834,6 +1834,8 @@ void CGame::SimFrame() {
 
 			SCOPED_TIMER("Sim::Script");
 			unitScriptEngine->Tick(tickMs);
+
+			unitHandler.UpdatePostAnimation();
 		}
 		envResHandler.Update();
 		losHandler->Update();
